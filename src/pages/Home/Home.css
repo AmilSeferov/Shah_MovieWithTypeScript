@@ -1,0 +1,14 @@
+.home{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .flimList{
+       max-width: 1040px;
+        display: flex;
+        flex-direction: row;
+        /* justify-content: space-between; */
+        flex-wrap: wrap;
+    }
+}

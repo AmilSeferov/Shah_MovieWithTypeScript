@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil:opsz,wght@10..72,100..900&family=Merienda:wght@300..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+*{
+  margin: 0px ;
+  padding: 0px ;
+  box-sizing: border-box;
+    font-family: "Merienda"
+}
+body{
+background-color:rgb(45 43 43);;
+  /* background: linear-gradient(45deg, #302f2f, #363547, #422d42, #6f3068, #783049, #873838); */
+  background: linear-gradient(45deg, #302f2f, #363547, #422d42, #6f3068, #783049, #873838);
+  width: 100%;
+     min-height: 90vh;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+ 
+}

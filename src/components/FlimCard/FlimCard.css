@@ -1,0 +1,37 @@
+.cardBody{
+    background-color: #100f0f;
+    border-radius:0 0 20px 20px;
+    padding: 0 5px 5px 5px;
+    margin: 50px 15px 0 0;
+ .img  { width: 183px;
+    height: 267px;
+    
+    background-color:#2b2b2b;
+    background-image: url("https://m.media-amazon.com/images/M/MV5BOTlkOTk1ZGQtMDM0Yi00OTQ5LWE3MDEtOGMxMTg3YjEwOTIyXkEyXkFqcGdeQXVyMjUxMzU3MTM@._V1_UY268_CR10,0,182,268_AL_.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    
+    display: flex;
+    justify-content: end;
+.imd{
+    background-color: red;
+    height: 35px;
+    width: 30px;
+    margin-right: 13px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0 0  10px 10px;
+}
+}
+    
+   p{
+    margin: 0 5px;
+    color: #ffffff;
+    font-size: 14px;
+    height: 28px;
+   }
+
+   
+}
+
