@@ -1,3 +1,7 @@
 .navbg{
     background: linear-gradient(45deg, #302f2f, #363547, #422d42, #6f3068, #783049, #873838);
 }
+.active{
+    background: linear-gradient(90deg, #5d5d5d, #3a3a3e, #534353, #563753, #5b3241, #634e4e);
+    border-radius: 20px;
+}
