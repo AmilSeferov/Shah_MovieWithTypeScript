@@ -1,20 +1,15 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
 import type { ActionReducerMapBuilder, PayloadAction } from '@reduxjs/toolkit'
 import axios from 'axios'
+import { initialStateType } from '../types/Types'
 
 
  export const fechCurrency=createAsyncThunk("fechCurrency",async()=>{
-    const data = (await axios.get(" https://v6.exchangerate-api.com/v6/718e7bd4ae2faa46543bd7d9/latest/USD")).data.conversion_rates
+    const data = (await axios.get(" https://v6.exchangerate-api.com/v6/718e7bd4ae2faa46543bd7d9/latest/USD"))
 
     return data
  })
-    export interface initialStateType{
-         isLoading:boolean,
-         error:boolean,
-         data:{
-            [key:string]:string
-         }
-    }
+    
  
 const initialState:initialStateType={
     isLoading:false,
