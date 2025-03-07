@@ -1,10 +1,11 @@
 import "./About.css";
-import { GiMusicSpell } from "react-icons/gi";
+import { RiMovieFill } from "react-icons/ri";
 function About() {
   return (
     <div className="about">
       <div className="logo">
-
+     <RiMovieFill className="icon"/>
+     <p>ShahMovie</p>
       </div>
       <div className="info">
         ShahMovie is a platform designed for discovering the latest and most

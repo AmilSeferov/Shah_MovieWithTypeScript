@@ -1,3 +1,30 @@
 .about{
   min-height: 74vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .logo{
+  display: flex;
+
+    flex-direction: column;
+  justify-content: center;
+  align-items: center;
+    .icon{
+        font-size: 120px;
+        color: rgb(171, 0, 0);
+        border-radius: 65px;
+    }
+    p{
+        font-size: 40px;
+        color: #000000;
+        font-weight: 700;
+    }
+
+  }
+  .info{
+    width: 50%;
+    font-weight: 400;
+    color: #000000;
+  }
 }
