@@ -1,4 +1,19 @@
-const data={
+import { configureStore } from '@reduxjs/toolkit'
+
+
+const data:{
+  page: number;
+  results: {
+      genre: string[];
+      imageurl: string[];
+      imdbid: string;
+      imdbrating: number;
+      released: number;
+      synopsis: string;
+      title: string;
+      type: string;
+  }[];
+}={
     "page": 1,
     "results": [
       {
@@ -778,3 +793,13 @@ const data={
       }
     ]
   }
+
+
+export const store = configureStore({
+  reducer: {},
+})
+
+// Infer the `RootState` and `AppDispatch` types from the store itself
+export type RootState = ReturnType<typeof store.getState>
+// Inferred type: {posts: PostsState, comments: CommentsState, users: UsersState}
+export type AppDispatch = typeof store.dispatch
