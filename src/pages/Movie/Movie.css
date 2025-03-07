@@ -1,0 +1,34 @@
+.movie{
+    width: 65%;
+    height: 539px;
+    background-color: rgb(62, 62, 62);
+    border-radius: 70px;
+    display: flex;
+    flex-direction: column;
+align-items: center;
+    .exit{
+        align-self: self-end;
+        margin-right: 30px;
+        font-size: 30px;
+        color: azure;
+    }
+    .content{
+        width: 80%;
+        height: 500px;
+        margin-top: 50px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        img{
+            width: 180px;
+        }
+        .text{
+            color: #b70000;
+            .imdb{
+                color: rgb(192, 6, 6);
+            }
+        }
+    }
+    
+}
