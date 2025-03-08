@@ -8,6 +8,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-decoration: none;
   .img {
  
     width: 180px;
@@ -23,6 +24,7 @@ position: relative;
       height: 270px;
     }
     .imd {
+        color: #ffffff;
       background-color: red;
       height: 35px;
       width: 30px;
@@ -41,5 +43,6 @@ position: relative;
     color: #ffffff;
     font-size: 14px;
     height: 28px;
+    
   }
 }

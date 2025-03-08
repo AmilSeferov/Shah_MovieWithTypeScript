@@ -1,4 +1,5 @@
 
+import { Link } from 'react-router-dom';
 import FlimCard from '../FlimCard/FlimCard';
 import './MovieList.css'
 function MovieList() {
@@ -8,17 +9,11 @@ function MovieList() {
              <h1>Dram</h1>
         </div>
         <div className="movieSwiper">
-       <FlimCard/>
-       <FlimCard/>
-       <FlimCard/>
-       <FlimCard/>
-       <FlimCard/>
-       <FlimCard/>
-       <FlimCard/>
-       <FlimCard/>
-       <FlimCard/>
-       <FlimCard/>
-       <FlimCard/>
+            <Link to={'/Movie'}>
+            <FlimCard/>
+            </Link>
+       
+      
   
         </div>
     </div>
