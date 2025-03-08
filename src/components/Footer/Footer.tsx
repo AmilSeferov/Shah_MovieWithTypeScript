@@ -1,7 +1,7 @@
-import './Footer.css'
+import "./Footer.css";
 function Footer() {
   return (
-    <div className='footer'>
+    <div className="footer">
       <p className="text1">Design by Səfərov Amil</p>
       <ul className="example-2">
         <li className="icon-content">
