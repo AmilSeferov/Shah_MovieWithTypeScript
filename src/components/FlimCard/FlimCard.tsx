@@ -1,6 +1,7 @@
 import { Button } from "react-bootstrap";
 import "./FlimCard.css";
-function FlimCard() {
+import { dataType } from "../../types/Types";
+function FlimCard({data}:{data:dataType}) {
   return (
     <div className="cardBody" >
      <div className="img">
