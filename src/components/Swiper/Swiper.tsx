@@ -5,7 +5,11 @@ import 'swiper/css';
 import { Autoplay, Scrollbar,  } from 'swiper/modules';
 import './Swiper.css'
 import { Button, Image } from 'react-bootstrap';
+import { dataType } from '../../types/Types';
+import { useSelector } from 'react-redux';
+import { RootState } from '../../redux/store';
 export default () => {
+  const data:dataType[] = useSelector((state:RootState)=>state.data.data)
   return (
     <Swiper className='slider border border-dark d-flex justify-content-center'
       spaceBetween={50}
@@ -20,17 +24,19 @@ export default () => {
       onSlideChange={() => console.log('slide change')}
       onSwiper={(swiper) => console.log(swiper)}
     >
-      <SwiperSlide className='slide'>
-        <div className="tittle">
-          <h2>roneyy</h2>
-          <p>Filmlər, onlayn izlə, HD filmlər, TV seriallar, Azərbaycanca dublyaj film və seriallar izlə. 720p və Full HD keyfiyyətində filmləri Azərbaycan dilində izlə.</p>
-          <Button variant="danger">Izle</Button>
-        </div>
-        <img src="https://i.imgur.com/WDPNgdo.jpeg" alt=""   />
-      </SwiperSlide>
-      <SwiperSlide className='slide'>Slide 2</SwiperSlide>
-      <SwiperSlide className='slide'>Slide 3</SwiperSlide>
-      <SwiperSlide className='slide'>Slide 4</SwiperSlide>
+      {
+        data.map(item=>{
+          return <SwiperSlide className='slide'>
+          <div className="tittle">
+            <h2>{item.title}</h2>
+            <p>{item.synopsis}</p>
+            <Button variant="danger">Izle</Button>
+          </div>
+          <img src={item.imageurl[0]} alt=""   />
+        </SwiperSlide>
+        })
+      }
+      
     </Swiper>
   );
 };
