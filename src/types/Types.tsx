@@ -1,12 +1,12 @@
 export interface initialStateType {
   isLoading: boolean;
   error: boolean;
-  data:dataType[] ;
-  genre:string[]
+  data: dataType[];
+  genre: string[];
 }
 export interface initialData {
   page: number;
-  results: dataType [];
+  results: dataType[];
 }
 export interface dataType {
   genre: string[];
@@ -18,4 +18,3 @@ export interface dataType {
   title: string;
   type: string;
 }
-;

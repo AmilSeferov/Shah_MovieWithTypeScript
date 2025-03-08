@@ -669,9 +669,7 @@ const initialState: initialStateType = {
 export const movieSlice = createSlice({
   name: "movies",
   initialState,
-  reducers: {
-    
-  },
+  reducers: {},
   // extraReducers:(builder:ActionReducerMapBuilder<initialStateType>)=>{
   //   builder.addCase(fechCurrency.pending,(state)=>{
   //       state.isLoading=true
@@ -691,6 +689,6 @@ export const movieSlice = createSlice({
   // }
 });
 
-export const {  } = movieSlice.actions;
+export const {} = movieSlice.actions;
 
 export default movieSlice.reducer;

@@ -4,8 +4,8 @@ function About() {
   return (
     <div className="about">
       <div className="logo">
-     <RiMovieFill className="icon"/>
-     <p>ShahMovie</p>
+        <RiMovieFill className="icon" />
+        <p>ShahMovie</p>
       </div>
       <div className="info">
         ShahMovie is a platform designed for discovering the latest and most
