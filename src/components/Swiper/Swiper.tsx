@@ -16,6 +16,7 @@ export default () => {
       slidesPerView={1}
       modules={[Autoplay]}
       
+      
           autoplay={{
             delay: 50000,
             disableOnInteraction: false, // Keeps autoplay running after user interaction
