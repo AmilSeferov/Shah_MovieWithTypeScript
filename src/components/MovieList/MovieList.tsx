@@ -2,10 +2,12 @@ import { Link } from "react-router-dom";
 import FlimCard from "../FlimCard/FlimCard";
 import "./MovieList.css";
 import { dataType } from "../../types/Types";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../redux/store";
+import { addPersonalData } from "../../redux/movieSlice";
 function MovieList({ genre }: { genre: string }) {
   const data: dataType[] = useSelector((state: RootState) => state.data.data);
+  const disPatch=useDispatch()
   return (
     <>
       <div className="movieList">
@@ -20,7 +22,9 @@ function MovieList({ genre }: { genre: string }) {
               item.genre[2] === genre
             ) {
               return (
-                <Link key={index} to={"/Movie"}>
+                <Link key={index} to={"/Movie"} onClick={()=>{
+disPatch(addPersonalData(item))
+                }}>
                   <FlimCard data={item} />
                 </Link>
               );

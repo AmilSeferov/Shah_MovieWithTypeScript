@@ -1,6 +1,9 @@
+import { useSelector } from "react-redux";
 import "./Movie.css";
 import { IoExitOutline } from "react-icons/io5";
+import { RootState } from "../../redux/store";
 function Movie() {
+  const data =useSelector((state:RootState)=>state.data.personalData)
   return (
     <div className="movie">
       <div className="exit">
@@ -8,16 +11,13 @@ function Movie() {
       </div>
       <div className="content">
         <div className="text">
+          <h2>{data.title}</h2>
           <p>
-            With our user-friendly interface, you can easily find your favorite
-            genres, explore trending productions, and access the latest releases
-            quickly. We are constantly evolving to enhance your entertainment
-            experience and provide the best service possible. Unlock the world
-            of cinema with ShahMovie and enjoy your favorite productions!
+            {data.synopsis}
           </p>
-          <p className="imdb">Imdb:8.0</p>
+          <p className="imdb">Imdb:{data.imdbrating}</p>
         </div>
-        <img src="https://i.imgur.com/WDPNgdo.jpeg" alt="" />
+        <img src={data.imageurl[0]} alt="" />
       </div>
     </div>
   );

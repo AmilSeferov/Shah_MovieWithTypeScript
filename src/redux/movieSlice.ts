@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-import { dataType, initialData, initialStateType } from "../types/Types";
+import { actionsType, dataType, initialData, initialStateType } from "../types/Types";
 const data: initialData = {
   page: 1,
   results: [
@@ -665,11 +665,28 @@ const initialState: initialStateType = {
   error: false,
   data: data.results,
   genre: ["Action", "Crime", "Thriller", "Comedy", "Animation", "Adventure"],
+  personalData:{
+    genre: [''],
+      imageurl: [''
+        
+      ],
+      imdbid: "",
+      imdbrating: 7.4,
+      released: 2019,
+      synopsis:
+        "",
+      title: "",
+      type: "",
+  }
 };
 export const movieSlice = createSlice({
   name: "movies",
   initialState,
-  reducers: {},
+  reducers: {
+    addPersonalData:(state,actions:actionsType)=>{
+      state.personalData=actions.payload
+    }
+  },
   // extraReducers:(builder:ActionReducerMapBuilder<initialStateType>)=>{
   //   builder.addCase(fechCurrency.pending,(state)=>{
   //       state.isLoading=true
@@ -689,6 +706,6 @@ export const movieSlice = createSlice({
   // }
 });
 
-export const {} = movieSlice.actions;
+export const {addPersonalData} = movieSlice.actions;
 
 export default movieSlice.reducer;

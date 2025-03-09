@@ -3,6 +3,7 @@ export interface initialStateType {
   error: boolean;
   data: dataType[];
   genre: string[];
+  personalData:dataType;
 }
 export interface initialData {
   page: number;
@@ -17,4 +18,10 @@ export interface dataType {
   synopsis: string;
   title: string;
   type: string;
+}
+export interface actionsType{
+
+    payload: dataType;
+    type: string;
+
 }
