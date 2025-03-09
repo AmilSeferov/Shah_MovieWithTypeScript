@@ -18,9 +18,12 @@ color: rgb(255, 255, 255);
 padding: 0 100px;
 .tittle{
     width: 300px;
+    h2{
+        color: red;
+    }
 }
 img{
-    width: 180px;
+    width: 280px;
 }
     }
 }

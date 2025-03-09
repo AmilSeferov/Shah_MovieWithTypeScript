@@ -30,6 +30,7 @@ export default () => {
             <div className="tittle">
               <h2>{item.title}</h2>
               <p>{item.synopsis}</p>
+              <p className="text-danger">Released:{item.released} , Imdb:{item.imdbrating}</p>
               <Button variant="danger">Izle</Button>
             </div>
             <img src={item.imageurl[0]} alt="" />
