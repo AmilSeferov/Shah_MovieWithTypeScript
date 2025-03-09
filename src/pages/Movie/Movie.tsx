@@ -2,12 +2,14 @@ import { useSelector } from "react-redux";
 import "./Movie.css";
 import { IoExitOutline } from "react-icons/io5";
 import { RootState } from "../../redux/store";
+import { Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
 function Movie() {
   const data =useSelector((state:RootState)=>state.data.personalData)
   return (
     <div className="movie">
       <div className="exit">
-        <IoExitOutline />
+       <Link to={'/'}> <IoExitOutline /></Link>
       </div>
       <div className="content">
         <div className="text">
@@ -16,6 +18,7 @@ function Movie() {
             {data.synopsis}
           </p>
           <p className="imdb">Imdb:{data.imdbrating}</p>
+          <Button variant="danger">Izle</Button>
         </div>
         <img src={data.imageurl[0]} alt="" />
       </div>
