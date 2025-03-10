@@ -4,8 +4,11 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import "./NavBar.css";
 import { Link, useLocation } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { searchData } from "../../redux/movieSlice";
 function NavBar() {
   const search = useLocation();
+  const dispath=useDispatch()
   return (
     <div className="nav">
       <Navbar
@@ -40,15 +43,16 @@ function NavBar() {
             </Nav>
             <Form className="d-flex">
               <Form.Control
-                onChange={(e: React.ChangeEvent<FormControlElement>) => {
-                  console.log(e.target.value);
+                onChange={(e:React.ChangeEvent<HTMLInputElement>) => {
+                  // console.log(e.target.value);
+                  dispath(searchData(e.target.value))
                 }}
                 type="search"
                 placeholder="Search"
                 className="me-2"
                 aria-label="Search"
               />
-              <Button variant="outline-danger text-light ">Search</Button>
+             <Link to={'/Search'}> <Button  variant="outline-danger text-light ">Search</Button></Link>
             </Form>
           </Navbar.Collapse>
         </Container>

@@ -1,6 +1,11 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-import { actionsType, dataType, initialData, initialStateType } from "../types/Types";
+import {
+  actionsType,
+  dataType,
+  initialData,
+  initialStateType,
+} from "../types/Types";
 const data: initialData = {
   page: 1,
   results: [
@@ -664,28 +669,44 @@ const initialState: initialStateType = {
   isLoading: false,
   error: false,
   data: data.results,
+  search: [],
   genre: ["Action", "Crime", "Thriller", "Comedy", "Animation", "Adventure"],
-  personalData:{
-    genre: [''],
-      imageurl: [''
-        
-      ],
-      imdbid: "",
-      imdbrating: 7.4,
-      released: 2019,
-      synopsis:
-        "",
-      title: "",
-      type: "",
-  }
+  personalData: {
+    genre: [""],
+    imageurl: [""],
+    imdbid: "",
+    imdbrating: 7.4,
+    released: 2019,
+    synopsis: "",
+    title: "",
+    type: "",
+  },
 };
 export const movieSlice = createSlice({
   name: "movies",
   initialState,
   reducers: {
-    addPersonalData:(state,actions:actionsType)=>{
-      state.personalData=actions.payload
-    }
+    addPersonalData: (state, actions: actionsType) => {
+      state.personalData = actions.payload;
+    },
+    searchData: (
+      state,
+      actions: {
+        payload: string;
+        type: string;
+      }
+    ) => {
+      if (actions.payload.trim() !== "") {
+        state.search = [
+          ...state.data.filter((item) => {
+            const dat = new RegExp(actions.payload.toLowerCase().trim());
+            console.log(dat.test(item.title.toLowerCase().trim()))
+            return dat.test(item.title.toLowerCase().trim());
+          }),
+        ];
+        console.log(actions.payload.trim())
+      }
+    },
   },
   // extraReducers:(builder:ActionReducerMapBuilder<initialStateType>)=>{
   //   builder.addCase(fechCurrency.pending,(state)=>{
@@ -706,6 +727,6 @@ export const movieSlice = createSlice({
   // }
 });
 
-export const {addPersonalData} = movieSlice.actions;
+export const { addPersonalData, searchData } = movieSlice.actions;
 
 export default movieSlice.reducer;

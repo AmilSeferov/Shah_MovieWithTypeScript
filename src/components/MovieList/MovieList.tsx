@@ -25,7 +25,7 @@ function MovieList({ genre }: { genre: string }) {
                 <Link key={index} to={"/Movie"} onClick={()=>{
 disPatch(addPersonalData(item))
                 }}>
-                  <FlimCard data={item} />
+                  <FlimCard key={index} data={item} />
                 </Link>
               );
             }

@@ -2,6 +2,7 @@ export interface initialStateType {
   isLoading: boolean;
   error: boolean;
   data: dataType[];
+  search:dataType[]
   genre: string[];
   personalData:dataType;
 }
